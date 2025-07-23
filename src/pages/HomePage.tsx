@@ -6,10 +6,20 @@ import { categories } from '../data/products';
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-slate-900 via-red-900 to-slate-900 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative container mx-auto px-4 text-center">
+      {/* Hero Section with Animated GIF Background */}
+      <section className="relative text-white py-20 overflow-hidden">
+        {/* Animated GIF Background */}
+        <img
+          src="https://cdn.dribbble.com/userupload/36390557/file/original-c48defec5369defd232aae8eabedf690.gif"
+          alt="Animated racing background"
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-30 pointer-events-none"
+        />
+
+        {/* Overlay for better contrast */}
+        <div className="absolute inset-0 bg-black opacity-60"></div>
+
+        {/* Content */}
+        <div className="relative container mx-auto px-4 text-center z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             RACE-INSPIRED
             <br />
@@ -39,7 +49,7 @@ const HomePage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2">Speed Design</h3>
               <p className="text-gray-600">Aerodynamic cuts inspired by Formula 1 engineering</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Trophy className="w-8 h-8 text-white" />
@@ -47,7 +57,7 @@ const HomePage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2">Championship Quality</h3>
               <p className="text-gray-600">Premium materials worthy of the podium</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8 h-8 text-white" />
@@ -63,9 +73,9 @@ const HomePage: React.FC = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Racing Collections</h2>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {categories.map((category, index) => (
+            {categories.map((category) => (
               <div key={category.id} className="group">
                 {category.isActive ? (
                   <Link to={`/category/${category.id}`} className="block">
