@@ -11,31 +11,32 @@ const Header: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-slate-900 text-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4">
+    <header className="bg-primary text-white shadow-md sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
+          
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-red-600 hover:text-red-500 transition-colors">
+          <Link to="/" className="text-3xl font-extrabold tracking-wide text-white hover:text-secondary transition-colors">
             VELOCITY
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 text-base font-medium">
             <Link 
               to="/" 
-              className={`hover:text-red-500 transition-colors ${isActive('/') ? 'text-red-500' : ''}`}
+              className={`hover:text-secondary transition-colors ${isActive('/') ? 'text-secondary underline' : ''}`}
             >
               Home
             </Link>
             <Link 
               to="/products" 
-              className={`hover:text-red-500 transition-colors ${isActive('/products') ? 'text-red-500' : ''}`}
+              className={`hover:text-secondary transition-colors ${isActive('/products') ? 'text-secondary underline' : ''}`}
             >
               Shop
             </Link>
             <Link 
               to="/category/tees" 
-              className={`hover:text-red-500 transition-colors ${location.pathname.includes('/category') ? 'text-red-500' : ''}`}
+              className={`hover:text-secondary transition-colors ${location.pathname.includes('/category') ? 'text-secondary underline' : ''}`}
             >
               Racing Tees
             </Link>
@@ -43,24 +44,25 @@ const Header: React.FC = () => {
 
           {/* Actions */}
           <div className="flex items-center space-x-4">
-            <button className="hover:text-red-500 transition-colors">
+            <button className="hover:text-secondary transition-colors">
               <Search className="w-5 h-5" />
             </button>
             
-            <Link to="/auth/login" className="hover:text-red-500 transition-colors">
+            <Link to="/auth/login" className="hover:text-secondary transition-colors">
               <User className="w-5 h-5" />
             </Link>
             
-            <Link to="/cart" className="relative hover:text-red-500 transition-colors">
+            <Link to="/cart" className="relative hover:text-secondary transition-colors">
               <ShoppingCart className="w-5 h-5" />
               {cartItemCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="absolute -top-2 -right-2 bg-white text-primary font-bold text-xs rounded-full w-5 h-5 flex items-center justify-center shadow-sm">
                   {cartItemCount}
                 </span>
               )}
             </Link>
 
-            <button className="md:hidden">
+            {/* Mobile Menu Toggle */}
+            <button className="md:hidden hover:text-secondary transition-colors">
               <Menu className="w-5 h-5" />
             </button>
           </div>
