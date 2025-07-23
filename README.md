@@ -58,5 +58,5 @@ This project is a submission for the **Framer Internship Task**, built using **N
 
 ---
 
-**Designed and Built by Sumit Kumar**  
-[GitHub Profile](https://github.com/sumit-616)
+**Designed and Built by Sasank Reddy **  
+
