@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
   />
 
   {/* Overlay */}
-  <div className="absolute inset-0 bg-black opacity-60"></div>
+  <div className="absolute inset-0 bg-black opacity-80"></div>
 
   {/* Content Container */}
   <div className="relative container mx-auto px-4 z-10 flex items-center">
