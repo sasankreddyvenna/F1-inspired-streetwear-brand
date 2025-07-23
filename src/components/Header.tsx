@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-primary text-white shadow-md sticky top-0 z-50">
+    <header className="bg-gradient-to-r from-white via-red-200 to-red-600 text-black shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           
