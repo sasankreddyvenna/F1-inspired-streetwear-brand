@@ -14,17 +14,17 @@ const Header: React.FC = () => {
     <header className="bg-primary text-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-
-          {/* Logo with white box */}
-          <div className="bg-white text-primary px-4 py-1 rounded-md shadow-sm">
+          
+          {/* Logo with transparent background */}
+          <div className="bg-white/20 backdrop-blur-sm text-white px-4 py-1 rounded-md shadow-sm">
             <Link to="/" className="text-3xl font-extrabold tracking-wide hover:text-secondary transition-colors">
               F1 STORE
             </Link>
           </div>
 
-          {/* Navigation with white boxes */}
+          {/* Navigation with transparent boxes */}
           <nav className="hidden md:flex space-x-4 text-base font-medium">
-            <div className="bg-white text-primary px-3 py-1 rounded-md shadow-sm">
+            <div className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-md shadow-sm">
               <Link 
                 to="/" 
                 className={`hover:text-secondary transition-colors ${isActive('/') ? 'text-secondary underline' : ''}`}
@@ -32,7 +32,7 @@ const Header: React.FC = () => {
                 Home
               </Link>
             </div>
-            <div className="bg-white text-primary px-3 py-1 rounded-md shadow-sm">
+            <div className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-md shadow-sm">
               <Link 
                 to="/products" 
                 className={`hover:text-secondary transition-colors ${isActive('/products') ? 'text-secondary underline' : ''}`}
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
                 Shop
               </Link>
             </div>
-            <div className="bg-white text-primary px-3 py-1 rounded-md shadow-sm">
+            <div className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-md shadow-sm">
               <Link 
                 to="/category/tees" 
                 className={`hover:text-secondary transition-colors ${location.pathname.includes('/category') ? 'text-secondary underline' : ''}`}
@@ -55,11 +55,11 @@ const Header: React.FC = () => {
             <button className="hover:text-secondary transition-colors">
               <Search className="w-5 h-5" />
             </button>
-
+            
             <Link to="/auth/login" className="hover:text-secondary transition-colors">
               <User className="w-5 h-5" />
             </Link>
-
+            
             <Link to="/cart" className="relative hover:text-secondary transition-colors">
               <ShoppingCart className="w-5 h-5" />
               {cartItemCount > 0 && (
