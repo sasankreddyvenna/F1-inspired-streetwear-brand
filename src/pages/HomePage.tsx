@@ -8,29 +8,35 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen">
       {/* Hero Section with Animated GIF Background */}
       <section className="relative text-white py-20 overflow-hidden">
+  {/* Animated Background GIF */}
   <img
     src="https://cdn.dribbble.com/userupload/36390557/file/original-c48defec5369defd232aae8eabedf690.gif"
     alt="Animated racing background"
     className="absolute top-0 left-0 w-full h-full object-cover opacity-30 pointer-events-none"
   />
+
+  {/* Overlay */}
   <div className="absolute inset-0 bg-black opacity-60"></div>
 
-  <div className="relative container mx-auto px-4 text-left z-10 max-w-3xl">
-    <h1 className="text-5xl md:text-6xl font-bold mb-6">
-      DRIVEN BY SPEED
-      <br />
-      <span className="text-red-500">DEFINED BY STYLE</span>
-    </h1>
-    <p className="text-xl mb-8">
-      Premium racing-inspired apparel for champions on and off the track
-    </p>
-    <Link 
-      to="/products" 
-      className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
-    >
-      View All Products
-      <ArrowRight className="ml-2 w-5 h-5" />
-    </Link>
+  {/* Content Container */}
+  <div className="relative container mx-auto px-4 z-10 flex items-center">
+    <div className="text-left max-w-3xl">
+      <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        DRIVEN BY SPEED,
+        <br />
+        <span className="text-red-500">DEFINED BY STYLE</span>
+      </h1>
+      <p className="text-xl mb-8">
+        Premium racing-inspired apparel for champions on and off the track
+      </p>
+      <Link 
+        to="/products" 
+        className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+      >
+        View All Products
+        <ArrowRight className="ml-2 w-5 h-5" />
+      </Link>
+    </div>
   </div>
 </section>
 
