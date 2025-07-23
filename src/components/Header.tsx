@@ -17,7 +17,7 @@ const Header: React.FC = () => {
           
           {/* Logo */}
           <Link to="/" className="text-3xl font-extrabold tracking-wide text-white hover:text-secondary transition-colors">
-            VELOCITY
+            F1 STORE
           </Link>
 
           {/* Navigation */}
